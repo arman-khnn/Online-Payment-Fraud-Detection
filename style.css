@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+    color: #1185c8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    background: rgba(65, 255, 18, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    padding: 30px;
+    color: whitesmoke;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #e20000;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Form */
+form {
+    display: grid;
+    gap: 15px;
+}
+
+form label {
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid rgba(0, 0, 0, 0.996);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #000000;
+    transition: border-color 0.3s;
+}
+
+form input:focus {
+    border-color: #00c3ff;
+    outline: none;
+    box-shadow: 0 0 5px #00c3ff;
+}
+
+form button {
+    padding: 12px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Output Section */
+.output {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.output.success {
+    background: rgba(76, 175, 80, 0.2);
+    border: 1px solid #4caf50;
+    color: #81c784;
+}
+
+.output.error {
+    background: rgba(244, 67, 54, 0.2);
+    border: 1px solid #f44336;
+    color: #ef5350;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: violet;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    form button {
+        font-size: 1em;
+    }
+}
